@@ -1,0 +1,135 @@
+payment_id,order_id,customer_id,payment_method,payment_status,transaction_amount,anomaly_flag,anomaly_result
+1,1.0,1,UPI,Success,2499.0,1,Normal
+2,,2,Credit Card,Failed,2999.0,1,Normal
+3,2.0,3,UPI,Success,1531.16,1,Normal
+4,3.0,1006,UPI,Success,5279.98,1,Normal
+5,4.0,1009,UPI,Success,2499.0,1,Normal
+6,5.0,1013,Net Banking,Success,5302.3,1,Normal
+7,6.0,1015,Debit Card,Failed,5364.61,1,Normal
+8,7.0,1016,Net Banking,Failed,10959.1,1,Normal
+9,8.0,1020,UPI,Success,4863.29,1,Normal
+10,9.0,1024,UPI,Success,5082.74,1,Normal
+11,10.0,1028,UPI,Success,3194.74,1,Normal
+12,11.0,1029,Credit Card,Success,4275.62,1,Normal
+13,12.0,1030,Net Banking,Failed,12874.1,1,Normal
+14,13.0,1031,UPI,Success,2460.86,1,Normal
+15,14.0,1041,Net Banking,Success,7395.68,1,Normal
+16,15.0,1042,Credit Card,Success,3674.64,1,Normal
+17,16.0,1043,Credit Card,Success,4464.29,1,Normal
+18,17.0,1050,Debit Card,Failed,6809.16,1,Normal
+19,18.0,1056,Debit Card,Success,7114.05,1,Normal
+20,19.0,1058,Net Banking,Success,8928.58,1,Normal
+21,20.0,1062,Credit Card,Success,4380.12,1,Normal
+22,21.0,1067,Credit Card,Success,7424.4,1,Normal
+23,22.0,1071,Credit Card,Success,2503.52,1,Normal
+24,23.0,1072,Credit Card,Success,13618.32,1,Normal
+25,24.0,1074,UPI,Success,9020.72,1,Normal
+26,25.0,1075,UPI,Success,5471.31,1,Normal
+27,26.0,1076,Net Banking,Success,5532.34,1,Normal
+28,27.0,1088,Net Banking,Success,2937.71,1,Normal
+29,28.0,1091,Credit Card,Success,7998.0,1,Normal
+30,29.0,1093,Net Banking,Success,17809.18,1,Normal
+31,30.0,1095,Credit Card,Failed,5856.54,1,Normal
+32,31.0,1099,Debit Card,Success,5682.74,1,Normal
+33,32.0,1100,UPI,Success,579.87,-1,Unusual - Investigate
+34,33.0,1105,Debit Card,Success,13618.32,1,Normal
+35,34.0,1107,Credit Card,Success,1499.0,1,Normal
+36,35.0,1111,Debit Card,Success,6392.24,1,Normal
+37,36.0,1113,Debit Card,Success,5082.74,1,Normal
+38,37.0,1126,Debit Card,Success,9579.7,1,Normal
+39,38.0,1131,Debit Card,Success,5532.34,1,Normal
+40,39.0,1135,Net Banking,Success,5236.34,1,Normal
+41,40.0,1137,Debit Card,Failed,8257.83,1,Normal
+42,41.0,1138,Debit Card,Success,2937.71,1,Normal
+43,42.0,1140,Net Banking,Success,2320.67,1,Normal
+44,43.0,1142,Credit Card,Success,2137.81,1,Normal
+45,44.0,1145,Debit Card,Success,2947.76,1,Normal
+46,45.0,1150,Debit Card,Success,2664.21,1,Normal
+47,46.0,1154,Debit Card,Success,13584.16,1,Normal
+48,47.0,1156,Net Banking,Success,2423.69,1,Normal
+49,48.0,1159,Net Banking,Success,8249.52,1,Normal
+50,49.0,1162,Debit Card,Success,3802.88,1,Normal
+51,50.0,1164,Debit Card,Success,18304.92,-1,Unusual - Investigate
+52,51.0,1170,UPI,Success,5364.61,1,Normal
+53,52.0,1173,UPI,Success,6288.32,1,Normal
+54,53.0,1178,UPI,Success,2056.72,1,Normal
+55,54.0,1179,UPI,Failed,5126.88,1,Normal
+56,55.0,1184,Net Banking,Failed,2390.56,1,Normal
+57,56.0,1188,Debit Card,Success,8257.83,1,Normal
+58,57.0,1190,Net Banking,Success,17389.96,1,Normal
+59,58.0,1195,UPI,Success,9353.67,1,Normal
+60,59.0,1208,Net Banking,Failed,6231.37,1,Normal
+61,60.0,1210,UPI,Success,8413.64,1,Normal
+62,61.0,1212,Net Banking,Success,3370.76,1,Normal
+63,62.0,1213,UPI,Success,19401.36,-1,Unusual - Investigate
+64,63.0,1214,Debit Card,Success,19138.82,1,Normal
+65,64.0,1216,UPI,Success,17349.58,1,Normal
+66,65.0,1221,Net Banking,Success,7206.14,1,Normal
+67,66.0,1223,UPI,Success,5933.2,1,Normal
+68,67.0,1226,Debit Card,Success,1531.16,1,Normal
+69,68.0,1227,Debit Card,Success,5219.2,1,Normal
+70,69.0,1231,Net Banking,Success,8527.04,1,Normal
+71,70.0,1239,Credit Card,Success,19089.26,1,Normal
+72,71.0,1242,Credit Card,Success,2841.37,1,Normal
+73,72.0,1250,Credit Card,Success,19253.84,1,Normal
+74,73.0,1257,Credit Card,Failed,5082.74,1,Normal
+75,74.0,1258,Credit Card,Success,11286.9,1,Normal
+76,75.0,1263,Credit Card,Success,9775.82,1,Normal
+77,76.0,1268,Debit Card,Success,9919.3,1,Normal
+78,77.0,1270,UPI,Success,5969.94,1,Normal
+79,78.0,1272,Net Banking,Success,9979.84,1,Normal
+80,79.0,1274,Net Banking,Success,12866.56,1,Normal
+81,80.0,1276,UPI,Success,15627.02,1,Normal
+82,81.0,1286,Credit Card,Failed,9115.61,1,Normal
+83,82.0,1288,Credit Card,Success,7998.0,1,Normal
+84,83.0,1299,UPI,Success,5479.55,1,Normal
+85,84.0,1300,Net Banking,Success,4371.69,1,Normal
+86,85.0,1303,Debit Card,Success,3119.29,1,Normal
+87,86.0,1309,UPI,Success,1348.36,1,Normal
+88,87.0,1310,Credit Card,Success,19556.76,-1,Unusual - Investigate
+89,88.0,1311,UPI,Failed,13584.16,1,Normal
+90,89.0,1314,Debit Card,Success,10162.54,1,Normal
+91,90.0,1315,Net Banking,Success,5305.46,1,Normal
+92,91.0,1317,Net Banking,Success,12350.6,1,Normal
+93,92.0,1327,UPI,Success,17034.64,1,Normal
+94,93.0,1329,Net Banking,Success,2792.86,1,Normal
+95,94.0,1344,Net Banking,Success,3201.64,1,Normal
+96,95.0,1345,UPI,Success,14833.94,-1,Unusual - Investigate
+97,96.0,1348,UPI,Success,4482.14,1,Normal
+98,97.0,1362,UPI,Success,16124.2,1,Normal
+99,98.0,1368,Credit Card,Success,5895.52,1,Normal
+100,99.0,1369,Credit Card,Success,15484.9,1,Normal
+101,100.0,1373,Debit Card,Success,16124.2,1,Normal
+102,101.0,1374,Credit Card,Failed,6175.3,1,Normal
+103,102.0,1375,UPI,Success,6026.74,1,Normal
+104,103.0,1384,Credit Card,Failed,7987.17,1,Normal
+105,104.0,1389,Credit Card,Success,2937.71,1,Normal
+106,105.0,1393,Debit Card,Success,7813.51,1,Normal
+107,106.0,1395,Credit Card,Success,579.87,-1,Unusual - Investigate
+108,107.0,1396,UPI,Success,6403.28,1,Normal
+109,108.0,1397,Debit Card,Success,12596.04,1,Normal
+110,109.0,1399,UPI,Success,5465.72,1,Normal
+111,110.0,1400,UPI,Failed,7589.58,1,Normal
+112,111.0,1407,UPI,Failed,6392.24,1,Normal
+113,112.0,1412,Credit Card,Failed,8178.1,1,Normal
+114,113.0,1415,UPI,Success,9652.87,1,Normal
+115,114.0,1416,Debit Card,Success,13552.36,1,Normal
+116,115.0,1417,UPI,Success,1206.55,-1,Unusual - Investigate
+117,116.0,1426,Net Banking,Success,16670.06,1,Normal
+118,117.0,1444,UPI,Success,9421.82,1,Normal
+119,118.0,1447,Credit Card,Failed,9435.46,1,Normal
+120,119.0,1450,Net Banking,Success,1719.12,1,Normal
+121,120.0,1451,UPI,Success,4374.05,1,Normal
+122,121.0,1453,Net Banking,Success,5302.3,1,Normal
+123,122.0,1456,Credit Card,Success,8760.24,1,Normal
+124,123.0,1460,Net Banking,Success,2544.46,1,Normal
+125,124.0,1464,Net Banking,Failed,2841.37,1,Normal
+126,125.0,1474,Credit Card,Success,18113.74,1,Normal
+127,126.0,1476,Debit Card,Failed,8738.24,1,Normal
+128,127.0,1478,Credit Card,Success,4971.5,1,Normal
+129,128.0,1480,UPI,Success,6298.02,1,Normal
+130,129.0,1483,Net Banking,Success,1520.07,1,Normal
+131,130.0,1484,Debit Card,Success,19159.4,1,Normal
+132,131.0,1491,UPI,Success,5625.74,1,Normal
+133,132.0,1493,Debit Card,Success,8324.52,1,Normal
+134,133.0,1502,Debit Card,Success,6931.0,1,Normal

@@ -1,0 +1,4 @@
+area,finding,recommendation,priority
+Payments,"21 failed payment attempts totaling ₹151,989.12","Investigate payment failures by method, starting with Credit Card, which has ₹54,829.92 in failed attempts. Review gateway logs and retry behavior before changing payment settings.",High
+Delivery,62 of 113 shipments are marked delayed (54.87%).,"Review shipping-partner performance, dispatch times, and delivery estimates. Investigate repeated delays.",High
+Returns,"11 returns totaling ₹116,471.81 in refunds.",Investigate the most frequent recorded return reason: Damaged product (5 returns). Check product quality and listing accuracy.,Medium
