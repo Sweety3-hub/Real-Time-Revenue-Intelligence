@@ -88,4 +88,14 @@ Keerthi Reddy
 
 ## Dashboard Preview
 
-Dashboard screenshots will be added here soon.
+### 1. Business Overview
+
+![Business Overview](images/Dashboard-Overview.png)
+
+### 2. Payment Performance and Customer Journey
+
+![Payment Performance and Customer Journey](images/Dashboard-Charts.png)
+
+### 3. Delivery, Returns, and Payment Anomaly Detection
+
+![Delivery, Returns, and Payment Anomaly Detection](images/Dashboard-Risk-Analysis.png)
