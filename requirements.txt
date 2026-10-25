@@ -1,4 +1,6 @@
-
-pandas
-psycopg2-binary
 streamlit
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+plotly
