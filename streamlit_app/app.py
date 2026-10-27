@@ -20,59 +20,95 @@ st.caption(
     "Portfolio demonstration using simulated e-commerce data."
 )
 
-# --------------------------------------------------
-# Secure PostgreSQL connection
-# --------------------------------------------------
-password = os.getenv("PGPASSWORD")
-
-if not password:
-    st.error(
-        "PostgreSQL password is not available in this terminal. "
-        "Set the PGPASSWORD environment variable and restart the app."
-    )
-    st.stop()
-
-db_url = URL.create(
-    drivername="postgresql+psycopg2",
-    username="postgres",
-    password=password,
-    host="localhost",
-    port=5432,
-    database="revenue_intelligence",
-)
-
-engine = create_engine(db_url)
-
 
 # --------------------------------------------------
-# Load database information
+# Load data from CSV files or local PostgreSQL
 # --------------------------------------------------
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CSV_DIR = PROJECT_ROOT / "data" / "dashboard_csvs"
+
+REQUIRED_CSVS = [
+    "orders.csv",
+    "payments.csv",
+    "returns.csv",
+    "shipments.csv",
+    "events.csv",
+]
+
+
 @st.cache_data(ttl=60)
-def load_data():
-    with engine.connect() as connection:
-        orders = pd.read_sql_query(
-            text("SELECT * FROM orders"), connection
-        )
-        payments = pd.read_sql_query(
-            text("SELECT * FROM payments"), connection
-        )
-        returns = pd.read_sql_query(
-            text("SELECT * FROM returns"), connection
-        )
-        shipments = pd.read_sql_query(
-            text("SELECT * FROM shipments"), connection
-        )
-        events = pd.read_sql_query(
-            text("SELECT * FROM events"), connection
+def load_csv_data():
+    return (
+        pd.read_csv(CSV_DIR / "orders.csv"),
+        pd.read_csv(CSV_DIR / "payments.csv"),
+        pd.read_csv(CSV_DIR / "returns.csv"),
+        pd.read_csv(CSV_DIR / "shipments.csv"),
+        pd.read_csv(CSV_DIR / "events.csv"),
+    )
+
+
+@st.cache_data(ttl=60)
+def load_postgres_data():
+    password = os.getenv("PGPASSWORD")
+
+    if not password:
+        raise RuntimeError(
+            "PostgreSQL password is missing. "
+            "Set PGPASSWORD to use the local database."
         )
 
-    return orders, payments, returns, shipments, events
+    db_url = URL.create(
+        drivername="postgresql+psycopg2",
+        username="postgres",
+        password=password,
+        host="localhost",
+        port=5432,
+        database="revenue_intelligence",
+    )
+
+    engine = create_engine(db_url)
+
+    try:
+        with engine.connect() as connection:
+            orders = pd.read_sql_query(
+                text("SELECT * FROM orders"), connection
+            )
+            payments = pd.read_sql_query(
+                text("SELECT * FROM payments"), connection
+            )
+            returns = pd.read_sql_query(
+                text("SELECT * FROM returns"), connection
+            )
+            shipments = pd.read_sql_query(
+                text("SELECT * FROM shipments"), connection
+            )
+            events = pd.read_sql_query(
+                text("SELECT * FROM events"), connection
+            )
+
+        return orders, payments, returns, shipments, events
+
+    finally:
+        engine.dispose()
 
 
 try:
-    orders, payments, returns, shipments, events = load_data()
+    if all(
+        (CSV_DIR / filename).is_file()
+        for filename in REQUIRED_CSVS
+    ):
+        orders, payments, returns, shipments, events = (
+            load_csv_data()
+        )
+        st.caption("Data source: CSV snapshots")
+    else:
+        orders, payments, returns, shipments, events = (
+            load_postgres_data()
+        )
+        st.caption("Data source: PostgreSQL database")
+
 except Exception as error:
-    st.error(f"Could not load database data: {error}")
+    st.error(f"Could not load dashboard data: {error}")
     st.stop()
 
 
