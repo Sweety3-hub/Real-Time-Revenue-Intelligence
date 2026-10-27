@@ -1,0 +1,12 @@
+return_id,order_id,customer_id,product_id,return_date,return_reason,refund_amount,return_status
+1,1,1,1,2026-10-05 15:30:00,Damaged product,2499.0,Refunded
+2,10,1028,73,2026-10-30 00:00:00,Damaged product,3194.74,Refunded
+3,20,1062,114,2026-10-11 00:00:00,Damaged product,4380.12,Refunded
+4,50,1164,94,2026-10-22 00:00:00,Product not as expected,18304.92,Refunded
+5,60,1210,28,2026-10-14 00:00:00,Quality issue,8413.64,Refunded
+6,70,1239,83,2026-11-01 00:00:00,Wrong item,19089.26,Refunded
+7,80,1276,18,2026-10-16 00:00:00,Damaged product,15627.02,Refunded
+8,90,1315,292,2026-10-19 00:00:00,Wrong item,5305.46,Refunded
+9,100,1373,75,2026-10-22 00:00:00,Quality issue,16124.2,Refunded
+10,120,1451,143,2026-10-13 00:00:00,Quality issue,4374.05,Refunded
+11,130,1484,222,2026-10-30 00:00:00,Damaged product,19159.4,Refunded
